@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+
+.btn         { @apply inline-flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50; }
+.btn-outline { @apply inline-flex items-center gap-1 px-4 py-2 border rounded text-gray-700 hover:bg-gray-100; }
+.btn-sm      { @apply inline-flex items-center justify-center w-6 h-6 bg-red-600 text-white rounded-full text-xs; }
+.input       { @apply px-3 py-2 border rounded w-full; }
+
+
+body {
+  @apply bg-white text-black;
+}
+
+html:not([data-env="development"]) .gsap-marker {
+  display: none;
+}
