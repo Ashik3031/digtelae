@@ -57,7 +57,7 @@ export default function ContactPage() {
                   Get in touch
                 </h1>
                 <p className="text-gray-400">
-                  Share your project details and we'll respond shortly.
+                  Share your project details and we&apos;ll respond shortly.
                 </p>
               </div>
 
@@ -143,7 +143,9 @@ export default function ContactPage() {
             <div className="max-w-xl">
               <div className="space-y-10">
                 <div className="border-l-2 border-gray-700 pl-6">
-                  <p className="text-gray-500 text-xs tracking-widest uppercase mb-3">Phone</p>
+                  <p className="text-gray-500 text-xs tracking-widest uppercase mb-3">
+                    Phone
+                  </p>
                   <div className="text-gray-300 space-y-2 text-lg">
                     <div>
                       <a href="tel:+97145547292" className="hover:text-white transition">
@@ -159,7 +161,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="border-l-2 border-gray-700 pl-6">
-                  <p className="text-gray-500 text-xs tracking-widest uppercase mb-3">Email</p>
+                  <p className="text-gray-500 text-xs tracking-widest uppercase mb-3">
+                    Email
+                  </p>
                   <a
                     href="mailto:info@techbahn.ae"
                     className="text-gray-300 text-lg hover:text-white transition"
@@ -169,16 +173,20 @@ export default function ContactPage() {
                 </div>
 
                 <div className="border-l-2 border-gray-700 pl-6">
-                  <p className="text-gray-500 text-xs tracking-widest uppercase mb-3">Office</p>
+                  <p className="text-gray-500 text-xs tracking-widest uppercase mb-3">
+                    Office
+                  </p>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Office 209 B, Acico Business Park,<br />
+                    Office 209 B, Acico Business Park,
+                    <br />
                     Port Saeed, Dubai.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-800 pt-8 mt-8">
                   <p className="text-gray-500 text-sm">
-                    We typically respond within one business day. For urgent matters, calling is the fastest way to reach us.
+                    We typically respond within one business day. For urgent matters,
+                    calling is the fastest way to reach us.
                   </p>
                 </div>
               </div>
