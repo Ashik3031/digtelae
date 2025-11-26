@@ -22,11 +22,26 @@ export default function Admin() {
   // ✅ Our Clients State
   const [ourClients, setOurClients] = useState(Array(10).fill(null));
 
+  const serviceLabels = [
+  'Branding Solutions',
+  'Marketing Solutions',
+  'Website Development',
+  'E-commerce Development',
+  'Corporate Photography',
+  'Mobile Application',
+  'Software Development',
+  'Cyber Security',
+  'ERP Solutions',
+  'Corporate Training',
+  'Cloud Solutions'
+];
+
+
   useEffect(() => {
     (async () => {
       setHero((await fetchSection('hero', 1))[0] || null);
       setAbout((await fetchSection('about', 1))[0] || null);
-      setSvc(await fetchSection('service', 4));
+      setSvc(await fetchSection('service', 11));
       setCtaLinks(await fetchSection('cta', 10));
 
       // ✅ Our Works Fetch
@@ -48,10 +63,12 @@ export default function Admin() {
     if (sec === 'hero') setHero(null);
     else if (sec === 'about') setAbout(null);
     else if (sec === 'cta') setCtaLinks((prev) => prev.filter((x) => x.publicId !== id));
-    else if (sec === 'service') setSvc((a) => a.filter((x) => x.publicId !== id));
+    else if (sec === 'service') {
+  setSvc((prev) => prev.map((item) => (item && item.publicId === id ? null : item)));
+}
     else if (sec === 'ourworks') {
       if (ourWorksVideo?.publicId === id) setOurWorksVideo(null);
-      else
+      else 
         setOurWorksImages((prev) =>
           prev.map((img) => (img && img.publicId === id ? null : img))
         );
@@ -196,34 +213,52 @@ export default function Admin() {
           )}
         </Card>
 
-        {/* SERVICES */}
-        <Card title="Service gallery" subtitle="Exactly four images shown under Services.">
-          <div className="grid grid-cols-2 gap-4">
-            {Array.from({ length: 4 }).map((_, i) => {
-              const item = svc[i];
-              return (
-                <div key={i}>
-                  {item ? (
-                    <ThumbnailCard item={item} label={`Service ${i + 1}`} onDelete={() => remove(item.publicId, 'service')} />
-                  ) : (
-                    <DropZone>
-                      <ImageIcon className="w-8 h-8 text-gray-400" />
-                      <p className="text-xs text-gray-500">Slot {i + 1} (image)</p>
-                      <UploadBtn
-                        section="service"
-                        folder="site/services"
-                        className="btn btn-outline mt-2"
-                        onSaved={(doc) => setSvc((prev) => [...prev, doc].slice(0, 4))}
-                      >
-                        <ImageIcon className="w-4 h-4 mr-1" /> Upload Image
-                      </UploadBtn>
-                    </DropZone>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </Card>
+   { /* SERVICES */}
+<Card title="Service gallery" subtitle="Upload up to 11 images shown under Services.">
+  <div className="grid grid-cols-2 gap-6">
+    {Array.from({ length: 11 }).map((_, i) => {
+      const item = svc[i];
+      return (
+        <div key={i} className="space-y-2">
+          {/* ✅ Label above slot */}
+          <h4 className="text-sm font-medium text-gray-700 text-center">
+            {serviceLabels[i]}
+          </h4>
+          
+          {item ? (
+            <ThumbnailCard
+              item={item}
+              label={`Service ${i + 1}`}
+              onDelete={() => remove(item.publicId, 'service')}
+            />
+          ) : (
+            <DropZone>
+              <ImageIcon className="w-8 h-8 text-gray-400" />
+              <p className="text-xs text-gray-500">{serviceLabels[i]}</p>
+              <UploadBtn
+                section="service"
+                folder="site/services"
+                className="btn btn-outline mt-2"
+                onSaved={(doc) =>
+                  setSvc((prev) => {
+                    const updated = [...prev];
+                    updated[i] = doc; // ✅ Put uploaded image in correct slot
+                    return updated;
+                  })
+                }
+              >
+                <ImageIcon className="w-4 h-4 mr-1" /> Upload Image
+              </UploadBtn>
+            </DropZone>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</Card>
+
+
+
 
         {/* OUR WORKS */}
         <Card title="Our Works" subtitle="One video and three images showcasing our work.">

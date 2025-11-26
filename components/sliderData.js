@@ -1,8 +1,8 @@
 export const slides = [
   {
-    id: 'branding-solutions',
-    heading: 'Branding Solutions',
-    copy: 'Create a lasting impression with our comprehensive branding solutions in the UAE. We craft unique brand identities that resonate with your audience.',
+    id: 'Home Security and Automation',
+    heading: 'Home Security and Automation',
+    copy: 'Enhance your living space with our cutting-edge home security and automation solutions. Experience peace of mind and convenience like never before.',
     headingColor: '#fff', 
     subheadingColor: '#fff', // Gray
     buttonBg: '#6366f1', // Indigo
@@ -10,7 +10,7 @@ export const slides = [
     buttonHoverBg: '#4f46e5', // Darker Indigo
     headingFont: "'Montserrat', sans-serif",
     subheadingFont: "'Roboto', sans-serif",
-    bgImage: 'https://res.cloudinary.com/dxq0nrirt/image/upload/v1752758632/image_9_cvffmt.png',
+    bgImage: 'https://res.cloudinary.com/dugtxybef/image/upload/v1763726181/digital-tablet-screen-with-smart-home-controller-wooden-table_rxs8xe.jpg',
     link: '/services/branding-solutions'
   },
   {
@@ -146,7 +146,7 @@ export const slides = [
     headingColor: '#fff', 
     subheadingColor: '#fff',
     buttonBg: '#3b82f6',
-    buttonTextColor: '#ffffff',
+    buttonTextColor: '#f1f1f1',
     buttonHoverBg: '#2563eb',
     headingFont: "'Montserrat', sans-serif",
     subheadingFont: "'Inter', sans-serif",

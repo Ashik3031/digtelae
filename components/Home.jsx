@@ -22,10 +22,10 @@ export default function hoome() {
         <PremiumCreativeSlider />
       </div>
 
-      {/* Work */}
-      <div id="work">
+    
+      {/* <div id="work">
         <IphoneFeatureCards />
-      </div>
+      </div> */}
 
       {/* About */}
       <div id="about">
@@ -33,9 +33,9 @@ export default function hoome() {
       </div>
 
       {/* Team */}
-      <div id="team">
+      {/* <div id="team">
         <Whatwedosplit />
-      </div>
+      </div> */}
 
       {/* Careers */}
       <div id="careers">

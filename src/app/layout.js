@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/NavbarComponent";
 import Script from 'next/script';
 
 import 'next-cloudinary/dist/cld-video-player.css';
@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
       <body 
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         <Script
           src="https://widget.cloudinary.com/v2.0/global/all.js"
           strategy="beforeInteractive"
