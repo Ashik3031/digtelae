@@ -4,6 +4,8 @@
 import React from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 export default function ServiceDetailPage({ service }) {
   return (
@@ -11,11 +13,14 @@ export default function ServiceDetailPage({ service }) {
       {/* Hero Section */}
       <section className="relative bg-black text-white py-28 px-6 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={service.heroImage}
-            alt={service.title}
-            className="w-full h-full object-cover opacity-25"
-          />
+          <Image
+  src={service.heroImage}
+  alt={service.title}
+  fill
+  className="object-cover opacity-25"
+  priority
+/>
+
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/70" />
         </div>
 
@@ -45,15 +50,16 @@ export default function ServiceDetailPage({ service }) {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 justify-center">
-              <button className="inline-flex items-center gap-2 rounded-full bg-lime-400 text-black px-7 py-3 text-sm font-medium hover:bg-lime-300 transition-colors">
-                Get Started
-                <ArrowRight size={18} />
-              </button>
-              <button className="inline-flex items-center gap-2 rounded-full border border-zinc-600 px-7 py-3 text-sm font-medium text-zinc-200 hover:border-lime-400 hover:text-lime-300 transition-colors">
-                Contact Us
-              </button>
-            </div>
+            <div className="flex justify-center">
+  <Link
+    href="/contact"
+    className="inline-flex items-center gap-2 rounded-full bg-lime-400 text-black px-7 py-3 text-sm font-medium hover:bg-lime-300 transition-colors"
+  >
+    Contact Us
+    <ArrowRight size={18} />
+  </Link>
+</div>
+
           </div>
         </div>
       </section>

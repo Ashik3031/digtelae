@@ -5,6 +5,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { servicesData } from '../../../components/servicesData';
+import Image from 'next/image';
+
 
 export default function ServicesPage() {
   const services = Object.values(servicesData);
@@ -14,11 +16,14 @@ export default function ServicesPage() {
       {/* Minimal Hero */}
       <section className="relative bg-black min-h-[55vh] text-white overflow-hidden flex items-center py-24 px-6">
   <div className="absolute inset-0">
-    <img
-      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
-      alt="Technology"
-      className="w-full h-full object-cover opacity-20"
-    />
+    <Image
+  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+  alt="Technology"
+  fill
+  className="object-cover opacity-20"
+  priority
+/>
+
     <div className="absolute inset-0 bg-black/80" />
   </div>
 

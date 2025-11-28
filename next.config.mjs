@@ -5,12 +5,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'picsum.photos', // ✅ Keep remotePatterns if needed
+        
       },
     ],
     domains: [
       'img1.wsimg.com',         // ✅ Existing
       'via.placeholder.com',    // ✅ Existing
-      'res.cloudinary.com'      // ✅ Added Cloudinary
+      'res.cloudinary.com' ,     // ✅ Added Cloudinary
+      'images.unsplash.com'
     ],
   },
 };
