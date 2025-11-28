@@ -6,10 +6,10 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/f
 const Footer = () => {
   return (
     <footer className="bg-white text-black px-6 md:px-20 py-14 border-t border-gray-200">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        
+      {/* Top section */}
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 place-items-center text-center">
         {/* Logo + Tagline */}
-        <div className="md:col-span-1">
+        <div className="flex flex-col items-center">
           <Link href="/" className="text-2xl font-bold tracking-tight">
             DigTel
           </Link>
@@ -26,53 +26,76 @@ const Footer = () => {
 
         {/* Links Columns */}
         <div>
-          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">Services</h4>
+          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">
+            Services
+          </h4>
           <ul className="space-y-2 text-gray-600 text-sm">
-            <li><Link href="#">Product Design</Link></li>
-            <li><Link href="#">Web Development</Link></li>
-            <li><Link href="#">Mobile Apps</Link></li>
-            <li><Link href="#">AI Solutions</Link></li>
+            <li>
+              <Link href="#">Product Design</Link>
+            </li>
+            <li>
+              <Link href="#">Web Development</Link>
+            </li>
+            <li>
+              <Link href="#">Mobile Apps</Link>
+            </li>
+            <li>
+              <Link href="#">AI Solutions</Link>
+            </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">Industries</h4>
+          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">
+            Industries
+          </h4>
           <ul className="space-y-2 text-gray-600 text-sm">
-            <li><Link href="#">Fintech</Link></li>
-            <li><Link href="#">Healthcare</Link></li>
-            <li><Link href="#">E-commerce</Link></li>
-            <li><Link href="#">Education</Link></li>
+            <li>
+              <Link href="#">Fintech</Link>
+            </li>
+            <li>
+              <Link href="#">Healthcare</Link>
+            </li>
+            <li>
+              <Link href="#">E-commerce</Link>
+            </li>
+            <li>
+              <Link href="#">Education</Link>
+            </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">Company</h4>
+          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">
+            Company
+          </h4>
           <ul className="space-y-2 text-gray-600 text-sm">
-            <li><Link href="#">About Us</Link></li>
-            
-            <li><Link href="#">Blog</Link></li>
-            <li><Link href="#">Contact</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-sm font-semibold mb-4 text-gray-800 uppercase">Resources</h4>
-          <ul className="space-y-2 text-gray-600 text-sm">
-            <li><Link href="#">Case Studies</Link></li>
-            <li><Link href="#">Whitepapers</Link></li>
-            <li><Link href="#">Reports</Link></li>
-            <li><Link href="#">Webinars</Link></li>
+            <li>
+              <Link href="#">About Us</Link>
+            </li>
+            <li>
+              <Link href="#">Blog</Link>
+            </li>
+            <li>
+              <Link href="#">Contact</Link>
+            </li>
           </ul>
         </div>
       </div>
 
       {/* Bottom section */}
-      <div className="max-w-screen-xl mx-auto mt-12 border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-500">
+      <div className="max-w-screen-xl mx-auto mt-12 border-t border-gray-200 pt-6 flex flex-col items-center gap-4 text-sm text-gray-500">
         <p>© {new Date().getFullYear()} DigTel. All rights reserved.</p>
-        <div className="flex gap-4 mt-4 md:mt-0">
-          <Link href="#">Privacy Policy</Link>
-          <Link href="#">Terms of Service</Link>
-          <Link href="#">Sitemap</Link>
+        <div className="flex gap-4 flex-wrap justify-center">
+          <Link href="#" className="hover:text-green-600 transition">
+            Privacy Policy
+          </Link>
+          <Link href="#" className="hover:text-green-600 transition">
+            Terms of Service
+          </Link>
+          <Link href="#" className="hover:text-green-600 transition">
+            Sitemap
+          </Link>
         </div>
       </div>
     </footer>

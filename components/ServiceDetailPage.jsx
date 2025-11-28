@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { ArrowRight, Check } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServiceDetailPage({ service }) {
   return (
@@ -19,7 +20,8 @@ export default function ServiceDetailPage({ service }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+            {/* Icon + ID */}
             <div className="mb-6 inline-flex items-center gap-3">
               <div className="h-12 w-12 rounded-full border border-lime-400/50 flex items-center justify-center">
                 {React.createElement(service.icon, {
@@ -32,15 +34,18 @@ export default function ServiceDetailPage({ service }) {
               </span>
             </div>
 
+            {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 leading-tight">
               {service.title}
             </h1>
 
+            {/* Description */}
             <p className="text-base md:text-lg text-zinc-200 mb-8 leading-relaxed">
               {service.description}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 justify-center">
               <button className="inline-flex items-center gap-2 rounded-full bg-lime-400 text-black px-7 py-3 text-sm font-medium hover:bg-lime-300 transition-colors">
                 Get Started
                 <ArrowRight size={18} />
@@ -162,9 +167,11 @@ export default function ServiceDetailPage({ service }) {
             Share your current setup and requirements and we’ll help you decide what
             to implement first.
           </p>
-          <button className="inline-flex items-center justify-center rounded-full border border-lime-400/80 px-8 py-3 text-sm md:text-base font-medium text-lime-300 hover:bg-lime-400 hover:text-black transition-colors">
-            Book a consultation
-          </button>
+          <Link href="/contact">
+            <button className="inline-flex items-center justify-center rounded-full border border-lime-400/80 px-8 py-3 text-sm md:text-base font-medium text-lime-300 hover:bg-lime-400 hover:text-black transition-colors">
+              Book a consultation
+            </button>
+          </Link>
         </div>
       </section>
     </div>

@@ -12,7 +12,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Minimal Hero */}
-      <section className="relative py-20 px-6 bg-black min-h-[55vh] text-white overflow-hidden">
+      <section className="relative bg-black min-h-[55vh] text-white overflow-hidden flex items-center py-24 px-6">
   <div className="absolute inset-0">
     <img
       src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
@@ -22,17 +22,22 @@ export default function ServicesPage() {
     <div className="absolute inset-0 bg-black/80" />
   </div>
 
-  <div className="relative max-w-7xl mx-auto">
-    <p className="text-xs uppercase tracking-[0.25em] text-emerald-400 mb-4">
-      Services
-    </p>
-    <h1 className="text-4xl md:text-6xl font-semibold mb-4">
-      Secure. Smart. Connected.
-    </h1>
-    <p className="text-base md:text-lg text-zinc-300 max-w-2xl leading-relaxed">
-      Retail, offices, homes, and IT infrastructure — a focused suite of
-      solutions designed to keep your environments safe, efficient, and always on.
-    </p>
+  {/* Outer wrapper with LEFT PADDING */}
+  <div className="relative w-full pl-6 md:pl-20 lg:pl-28">
+    <div className="max-w-3xl bg-black/50 backdrop-blur-sm rounded-2xl p-8 md:p-10 md:mt-6">
+      <p className="text-xs uppercase tracking-[0.25em] text-emerald-400 mb-4">
+        Services
+      </p>
+
+      <h1 className="text-4xl md:text-6xl font-semibold mb-4">
+        Secure. Smart. Connected.
+      </h1>
+
+      <p className="text-base md:text-lg text-zinc-300 max-w-2xl leading-relaxed">
+        Retail, offices, homes, and IT infrastructure — a focused suite of
+        solutions designed to keep your environments safe, efficient, and always on.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -45,9 +50,7 @@ export default function ServicesPage() {
         return (
           <section
             key={service.id}
-            className={`py-16 px-6 ${
-              isDark ? 'bg-black' : 'bg-zinc-950'
-            }`}
+            className={`py-16 px-6 ${isDark ? 'bg-black' : 'bg-zinc-950'}`}
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -55,10 +58,7 @@ export default function ServicesPage() {
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                   <div className="mb-6 inline-flex items-center gap-3">
                     <div className="h-10 w-10 rounded-full border border-emerald-400/40 flex items-center justify-center">
-                      <Icon
-                        size={22}
-                        className="text-emerald-400"
-                      />
+                      <Icon size={22} className="text-emerald-400" />
                     </div>
                     <span className="text-xs uppercase tracking-[0.25em] text-zinc-400">
                       {service.id}

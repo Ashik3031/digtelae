@@ -57,7 +57,7 @@ export default function ContactPage() {
                   Get in touch
                 </h1>
                 <p className="text-gray-400">
-                  Share your project details and we&apos;ll respond shortly.
+                  Share your project details and we will respond shortly.
                 </p>
               </div>
 
@@ -168,7 +168,7 @@ export default function ContactPage() {
                     href="mailto:info@techbahn.ae"
                     className="text-gray-300 text-lg hover:text-white transition"
                   >
-                    info@techbahn.ae
+                    info@digtel.ae
                   </a>
                 </div>
 
@@ -177,9 +177,9 @@ export default function ContactPage() {
                     Office
                   </p>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    Office 209 B, Acico Business Park,
+                   City Bay Business Center, 
                     <br />
-                    Port Saeed, Dubai.
+                    Abhuhail, Dubai, UAE
                   </p>
                 </div>
 

@@ -64,7 +64,7 @@ export default function ModernHorizontalSlider() {
         const wrapper = wrapperRef.current;
         const panels = gsap.utils.toArray('.panel');
 
-        // Horizontal scroll
+        // Horizontal scroll without snap
         const horizontalScroll = gsap.to(wrapper, {
           x: () => -(wrapper.scrollWidth - window.innerWidth),
           ease: 'none',
@@ -77,10 +77,13 @@ export default function ModernHorizontalSlider() {
             anticipatePin: 1,
             id: 'horizontal',
             onUpdate: (self) => {
-              const index = Math.min(
-                Math.floor(self.progress * slides.length),
+              // Calculate active slide based on scroll position
+              const slideWidth = window.innerWidth / 2; // Each slide is 50% width
+              const scrolled = Math.abs(gsap.getProperty(wrapper, 'x'));
+              const index = Math.max(0, Math.min(
+                Math.floor((scrolled + slideWidth / 2) / slideWidth),
                 slides.length - 1
-              );
+              ));
               setActiveSlide(index);
             },
           },
@@ -97,8 +100,8 @@ export default function ModernHorizontalSlider() {
             scrollTrigger: {
               trigger: panel,
               containerAnimation: horizontalScroll,
-              start: 'left center',
-              end: 'right center',
+              start: 'left 80%',
+              end: 'center center',
               toggleActions: 'play none none reverse',
             },
           });
@@ -203,7 +206,7 @@ export default function ModernHorizontalSlider() {
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className="panel min-h-screen w-screen flex-shrink-0 relative flex items-center justify-center overflow-hidden"
+              className="panel min-h-screen w-1/2 flex-shrink-0 relative flex items-center justify-center overflow-hidden"
             >
               {/* Background image with overlay */}
               <div

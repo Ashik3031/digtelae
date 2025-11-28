@@ -15,7 +15,7 @@ const HugeNavbar = () => {
   const navItems = [
     { label: 'About', id: 'about', href: '/about' },
     { label: 'Services', id: 'services', href: '/services' },
-    { label: 'What we do', id: 'what we do', href: '#whatwedo' },
+    { label: 'What we do', id: 'what we do', href: '/#whatwedo' },
     { label: 'contact', id: 'contact', href: '/contact' },
   ];
 
