@@ -111,7 +111,7 @@ return (
 
       
       {/* Clients - Auto Scrolling */}
-      <section className="bg-gray-50 border-y border-gray-200 overflow-hidden">
+      <section className="bg-white border-y border-white overflow-hidden">
         <div className="py-16">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Products We dealing with</h2>
