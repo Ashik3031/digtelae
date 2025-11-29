@@ -150,7 +150,7 @@ export default function AboutPage() {
           >
             <p>
               We are a team of passionate creators, innovators, and dreamers
-              dedicated to pushing the boundaries of what's possible in the
+              dedicated to pushing the boundaries of what is possible in the
               digital realm.
             </p>
             <p>
@@ -161,7 +161,7 @@ export default function AboutPage() {
             </p>
             <p>
               With years of experience in design, development, and user
-              experience, we've helped countless brands transform their digital
+              experience, we have helped countless brands transform their digital
               presence into something extraordinary.
             </p>
           </div>
@@ -355,7 +355,7 @@ export default function AboutPage() {
               )}px)`,
             }}
           >
-            Have a project in mind? We'd love to hear about it. Let's create
+            Have a project in mind? We do love to hear about it. Lets create
             something extraordinary together.
           </p>
 

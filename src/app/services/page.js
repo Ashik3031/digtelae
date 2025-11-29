@@ -134,7 +134,7 @@ export default function ServicesPage() {
             Ready to design your next environment?
           </h2>
           <p className="text-sm md:text-base text-zinc-400 mb-8">
-            Share your requirements and we’ll help you shape a secure, intelligent
+            Share your requirements and we will help you shape a secure, intelligent
             space that fits your operations.
           </p>
           <Link

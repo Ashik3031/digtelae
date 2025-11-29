@@ -106,7 +106,7 @@ export default function ServiceDetailPage({ service }) {
         <div className="max-w-7xl mx-auto">
           <div className="mb-10">
             <h2 className="text-2xl md:text-3xl font-semibold mb-3">
-              What’s included
+              What included
             </h2>
             <p className="text-sm md:text-base text-zinc-400 max-w-2xl">
               A focused set of services tailored to {service.title.toLowerCase()}.
@@ -170,7 +170,7 @@ export default function ServiceDetailPage({ service }) {
             Ready to explore {service.title.toLowerCase()} in detail?
           </h2>
           <p className="text-sm md:text-base text-zinc-400 mb-8">
-            Share your current setup and requirements and we’ll help you decide what
+            Share your current setup and requirements and we will help you decide what
             to implement first.
           </p>
           <Link href="/contact">
